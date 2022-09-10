@@ -33,7 +33,7 @@ const defaultElementRenderers: DocumentRendererProps['renderers'] = {
   inline: {
     // inline code ` `
     code({ children }) {
-      return <code>{children}</code>;
+      return <code className="bg-amber-100 dark:bg-primary-100 text-slate-900 p-1 rounded after:content-[''] before:content-['']">{children}</code>;
     },
   },
 };
@@ -59,7 +59,7 @@ const customComponentRenderers: CustomRendererProps['componentBlocks'] = {
   code: function Code({ content, language }: any) {
     return (
       <section
-        className={`not-prose text-sm mb-8 rounded-md language-${language} flex items-center justify-center bg-slate-900 dark:bg-slate-900`}
+        className={`not-prose text-sm mb-8 rounded-md language-${language} flex items-center justify-center bg-slate-900 dark:bg-dark-100`}
       >
         {content}
       </section>

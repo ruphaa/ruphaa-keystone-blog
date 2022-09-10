@@ -32,15 +32,14 @@ export function BlogPage({ post }: BlogPageProps) {
     <React.Fragment>
       <BlogPageSeo
         title={post.title}
-        authorName={post.author.name}
         slug={post.slug}
         publishTimeISO={post.publishDate}
         metaDescription={post.metaDescription}
         metaImageUrl={post.metaImageUrl}
         metaImageAltText={post.metaImageAltText}
       />
-      <PageLayout className="max-w-3xl grid grid-rows-[1fr_auto]">
-        <main>
+      <PageLayout className="max-w-[50rem] grid grid-rows-[1fr_auto]">
+        <main className="p-4">
           <Header forPage="blog" />
           <div className="pb-4">
             <Link href="/">
@@ -49,7 +48,7 @@ export function BlogPage({ post }: BlogPageProps) {
               </a>
             </Link>
           </div>
-          <article className="prose lg:prose-lg prose:slate dark:prose-invert max-w-none pb-8">
+          <article className="prose lg:prose-lg prose:slate dark:prose-invert max-w-none pb-8 mt-12">
             <h1 className="!mb-0 pb-4">{post.title}</h1>
             <div className="text-sm text-slate-500 dark:text-slate-400">{formattedDate}</div>
             <CustomRenderer document={post.content.document} />

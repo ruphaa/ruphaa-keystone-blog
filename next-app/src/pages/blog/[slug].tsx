@@ -24,6 +24,7 @@ export async function getStaticProps({ params = {} }: GetStaticPropsContext) {
           title
           slug
           publishDate
+          type
           author {
             email
             name

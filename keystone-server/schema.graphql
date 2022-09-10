@@ -156,6 +156,7 @@ type Post {
   id: ID!
   title: String
   slug: String
+  type: PostTypeType
   status: PostStatusType
   publishDate: DateTime
   author: User
@@ -163,6 +164,13 @@ type Post {
   metaImageUrl: String
   metaImageAltText: String
   content: Post_content_Document
+}
+
+enum PostTypeType {
+  blog
+  notes
+  garden
+  book
 }
 
 enum PostStatusType {
@@ -189,12 +197,20 @@ input PostWhereInput {
   id: IDFilter
   title: StringFilter
   slug: StringFilter
+  type: PostTypeTypeNullableFilter
   status: PostStatusTypeNullableFilter
   publishDate: DateTimeNullableFilter
   author: UserWhereInput
   metaDescription: StringFilter
   metaImageUrl: StringFilter
   metaImageAltText: StringFilter
+}
+
+input PostTypeTypeNullableFilter {
+  equals: PostTypeType
+  in: [PostTypeType!]
+  notIn: [PostTypeType!]
+  not: PostTypeTypeNullableFilter
 }
 
 input PostStatusTypeNullableFilter {
@@ -219,6 +235,7 @@ input PostOrderByInput {
   id: OrderDirection
   title: OrderDirection
   slug: OrderDirection
+  type: OrderDirection
   status: OrderDirection
   publishDate: OrderDirection
   metaDescription: OrderDirection
@@ -229,6 +246,7 @@ input PostOrderByInput {
 input PostUpdateInput {
   title: String
   slug: String
+  type: PostTypeType
   status: PostStatusType
   publishDate: DateTime
   author: UserRelateToOneForUpdateInput
@@ -252,6 +270,7 @@ input PostUpdateArgs {
 input PostCreateInput {
   title: String
   slug: String
+  type: PostTypeType
   status: PostStatusType
   publishDate: DateTime
   author: UserRelateToOneForCreateInput

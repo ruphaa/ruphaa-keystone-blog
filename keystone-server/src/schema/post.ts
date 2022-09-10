@@ -8,6 +8,20 @@ export const Post = list({
   fields: {
     title: text({ validation: { isRequired: true } }),
     slug: text({ isIndexed: 'unique', validation: { isRequired: true } }),
+    type: select({
+      type: 'enum',
+      options: [
+        { label: 'Blog', value: 'blog' },
+        { label: 'Notes', value: 'notes' },
+        { label: 'Garden', value: 'garden' },
+        { label: 'Book notes', value: 'book' },
+      ],
+      defaultValue: 'blog',
+      ui: {
+        displayMode: 'segmented-control',
+        description: 'Used to tag the type of content.',
+      },
+    }),
     status: select({
       type: 'enum',
       options: [

@@ -22,6 +22,7 @@ export async function getStaticProps() {
         id
         title
         slug
+        type
         publishDate
         author {
           email

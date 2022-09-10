@@ -26,6 +26,7 @@ model Post {
   id               String    @id @default(cuid())
   title            String    @default("")
   slug             String    @unique @default("")
+  type             String?   @default("blog")
   status           String?   @default("draft")
   publishDate      DateTime?
   author           User?     @relation("Post_author", fields: [authorId], references: [id])
