@@ -2,33 +2,69 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { ThemeToggle } from './ThemeToggle';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import classnames from 'classnames';
 
 type Props = {
-  forPage: 'home' | 'blog';
+  forPage?: 'home' | 'blog' | 'about' | 'projects';
 };
 
 function TopNav() {
+  const router = useRouter();
+
   return (
-    <div className="justify-self-end py-2 flex items-center content-center">
-      <a
-        href="https://github.com/ruphaa"
-        aria-label="Dinesh on GitHub"
-        rel="noopener noreferrer"
-        target="_blank"
-        className="text-2xl ml-4 hover:text-primary-800 dark:hover:text-secondary-800"
-      >
-        <FontAwesomeIcon icon={faGithub} />
-      </a>
-      <a
-        href="https://twitter.com/ruphaaganesh"
-        aria-label="Dinesh on Twitter"
-        rel="noopener noreferrer"
-        target="_blank"
-        className="text-2xl ml-4 hover:text-primary-800 dark:hover:text-secondary-800"
-      >
-        <FontAwesomeIcon icon={faTwitter} />
-      </a>
-      <ThemeToggle />
+    <div className="flex justify-between">
+      <div className="py-2 flex items-center content-center">
+        <Link href={`/`}>
+          <a
+            className={classnames("text-base font-medium mr-4 hover:text-primary-800 dark:hover:text-secondary-800", {
+              'text-primary-800': router.pathname === '/'
+            })}
+          >
+            Home
+          </a>
+        </Link>
+        <Link href={`/about`}>
+          <a
+            className={classnames("text-base font-medium mr-4 hover:text-primary-800 dark:hover:text-secondary-800", {
+              'text-primary-800': router.pathname === '/about'
+            })}
+          >
+            About
+          </a>
+        </Link>
+        <Link href={`/projects`}>
+          <a
+            className={classnames("text-base font-medium mr-4 hover:text-primary-800 dark:hover:text-secondary-800", {
+              'text-primary-800': router.pathname === '/projects'
+            })}
+          >
+            Projects
+          </a>
+        </Link>
+      </div>
+      <div className="justify-self-end py-2 flex items-center content-center">
+        <a
+          href="https://github.com/ruphaa"
+          aria-label="Dinesh on GitHub"
+          rel="noopener noreferrer"
+          target="_blank"
+          className="text-2xl ml-4 hover:text-primary-800 dark:hover:text-secondary-800"
+        >
+          <FontAwesomeIcon icon={faGithub} />
+        </a>
+        <a
+          href="https://twitter.com/ruphaaganesh"
+          aria-label="Dinesh on Twitter"
+          rel="noopener noreferrer"
+          target="_blank"
+          className="text-2xl ml-4 hover:text-primary-800 dark:hover:text-secondary-800"
+        >
+          <FontAwesomeIcon icon={faTwitter} />
+        </a>
+        <ThemeToggle />
+      </div>
     </div>
   );
 }
