@@ -1,9 +1,9 @@
 {
   "name": "keystone-static-blog",
   "version": "0.0.1",
-  "description": "Starter template to statically generate blogs with Keystone and Next.js",
-  "repository": "git@github.com:flexdinesh/keystone-static-blog.git",
-  "author": "Dinesh Pandiyan <flexdinesh@gmail.com>",
+  "description": "Personal website with blogs and projects",
+  "repository": "git@github.com:ruphaa/ruphaa-keystone-blog.git",
+  "author": "Ruphaa Ganesan <ruphaaganesh@gmail.com>",
   "license": "MIT",
   "private": true,
   "workspaces": [
@@ -14,8 +14,14 @@
     "dev": "concurrently --names \"SERVER,APP\" -c \"magenta.bold,green.bold\" \"cd keystone-server && yarn dev\" \"cd next-app && yarn dev\"",
     "lint": "eslint . --ext .ts --ext .tsx",
     "lint:fix": "eslint . --ext .ts --ext .tsx --fix",
-    "build:keystone": "cd keystone-server && yarn build",
-    "build:app": "cd next-app && yarn build"
+    "keystone:docker:build": "docker build -t keystone-server -f keystone-server/Dockerfile .",
+    "keystone:docker:run": "docker run -p 3000:3000 keystone-server",
+    "keystone:docker:kill": "docker kill $(docker ps -q)",
+    "start:keystone": "cd keystone-server && yarn build && yarn start",
+    "kill:keystone": "kill-port --port 3000",
+    "export:app": "cd next-app && yarn clean && yarn export",
+    "export:docker": "node scripts/export.js --docker",
+    "export": "node scripts/export.js"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.33.1",
@@ -26,6 +32,8 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.30.1",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "prettier": "^2.7.1"
+    "kill-port": "^2.0.1",
+    "prettier": "^2.7.1",
+    "wait-on": "^6.0.1"
   }
 }
