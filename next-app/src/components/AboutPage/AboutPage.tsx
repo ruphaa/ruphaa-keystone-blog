@@ -47,6 +47,12 @@ export function AboutPage() {
             <main className="lg:text-lg p-4">
             <Header forPage="about"/>
             <div className="mt-12">
+              <h2 className="font-semibold text-3xl">About me</h2>
+              <p className="mt-4 dark:text-slate-400">
+                Hey, I'm Ruphaa! I'm a Software Engineer working in Sydney. Welcome to my digital garden, this is the space where I write blogs, build projects and many more creative and interesting stuff.
+              </p>
+            </div>
+            <div className="mt-12">
               <h2 className="font-semibold text-3xl">Speaking🎙</h2>
               <ul className="list-none mt-4">
               {
