@@ -33,7 +33,11 @@ const defaultElementRenderers: DocumentRendererProps['renderers'] = {
   inline: {
     // inline code ` `
     code({ children }) {
-      return <code className="bg-amber-100 dark:bg-primary-100 text-slate-900 p-1 rounded after:content-[''] before:content-['']">{children}</code>;
+      return (
+        <code className="bg-amber-100 dark:bg-primary-100 text-slate-900 p-1 rounded after:content-[''] before:content-['']">
+          {children}
+        </code>
+      );
     },
   },
 };

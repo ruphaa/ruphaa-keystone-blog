@@ -18,27 +18,36 @@ function TopNav() {
       <div className="py-2 flex items-center content-center">
         <Link href={`/`}>
           <a
-            className={classnames("text-base font-medium mr-4 hover:text-primary-800 dark:hover:text-secondary-800", {
-              'text-primary-800': router.pathname === '/'
-            })}
+            className={classnames(
+              'text-base font-medium mr-4 hover:text-primary-800 dark:hover:text-secondary-800',
+              {
+                'text-primary-800': router.pathname === '/',
+              }
+            )}
           >
             Home
           </a>
         </Link>
         <Link href={`/about`}>
           <a
-            className={classnames("text-base font-medium mr-4 hover:text-primary-800 dark:hover:text-secondary-800", {
-              'text-primary-800': router.pathname === '/about'
-            })}
+            className={classnames(
+              'text-base font-medium mr-4 hover:text-primary-800 dark:hover:text-secondary-800',
+              {
+                'text-primary-800': router.pathname === '/about',
+              }
+            )}
           >
             About
           </a>
         </Link>
         <Link href={`/projects`}>
           <a
-            className={classnames("text-base font-medium mr-4 hover:text-primary-800 dark:hover:text-secondary-800", {
-              'text-primary-800': router.pathname === '/projects'
-            })}
+            className={classnames(
+              'text-base font-medium mr-4 hover:text-primary-800 dark:hover:text-secondary-800',
+              {
+                'text-primary-800': router.pathname === '/projects',
+              }
+            )}
           >
             Projects
           </a>
@@ -78,22 +87,17 @@ export function Header({ forPage = 'home' }: Props) {
   return (
     <header className={`text-center grid auto-rows-auto ${headerClassnames}`}>
       <TopNav />
-      {
-        forPage == 'home'
-        ? 
+      {forPage == 'home' ? (
         <>
           <HeadingTag className={`dark:text-white ${headingClassnames} mt-12`}>
             {/* after:w-11/12 after:bg-gradient-to-bl after:from-primary-500 after:to-primary-700 dark:after:from-secondary-500 dark:after:to-secondary-700 */}
-            <span className="fancy-name">
-              Ruphaa Ganesan
-            </span>
+            <span className="fancy-name">Ruphaa Ganesan</span>
           </HeadingTag>
           <p className="text-zinc-800 dark:text-zinc-300 font-medium text tracking-wider mt-2">
             Welcome to my digital garden 🌱
           </p>
         </>
-        : null
-      }
+      ) : null}
     </header>
   );
 }

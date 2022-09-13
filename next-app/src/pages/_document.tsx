@@ -13,7 +13,10 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;0,800;1,400;1,700&display=swap"
           rel="stylesheet"
         />
-        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet"></link>
+        <link
+          href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+          rel="stylesheet"
+        ></link>
         {/* 
           The page is server rendered during build-time and hydrated on the browser client.
           While server rendering we do not know what the user's preferred/saved theme is and default to light theme.

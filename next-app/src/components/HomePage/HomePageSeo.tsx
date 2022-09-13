@@ -2,8 +2,7 @@ import Head from 'next/head';
 import React from 'react';
 
 export const title = 'Ruphaa Ganesan';
-const description =
-  'Fun-tastic web developer. Self proclaimed CSS expert. Design System wizard.';
+const description = 'Fun-tastic web developer. Self proclaimed CSS expert. Design System wizard.';
 export const websiteURL = 'https://ruphaa.dev';
 export const twitterHandle = '@ruphaaganesh';
 

@@ -11,7 +11,11 @@ export function ThemeToggle() {
   const { mode, toggleTheme } = useTheme();
 
   const toggleBackgroundClassname =
-    mode === null ? 'bg-transparent' : mode === 'dark' ? 'bg-zinc-900 border border-zinc-700' : 'bg-gray-200';
+    mode === null
+      ? 'bg-transparent'
+      : mode === 'dark'
+      ? 'bg-zinc-900 border border-zinc-700'
+      : 'bg-gray-200';
   return (
     <Switch
       checked={mode === 'dark'}

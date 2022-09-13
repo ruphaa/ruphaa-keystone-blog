@@ -14,11 +14,11 @@ export type HomePageProps = {
 export function HomePage({ posts, externalLinks }: HomePageProps) {
   const [visible, setVisible] = useState(10);
   const showMoreItems = () => {
-    setVisible((prevValue) => prevValue + 10);
+    setVisible(prevValue => prevValue + 10);
   };
   const hideItems = () => {
     setVisible(() => 10);
-  }
+  };
 
   const items = [...posts, ...externalLinks].sort((a, b) =>
     (b.publishDate || '').localeCompare(a.publishDate || '')
@@ -27,7 +27,6 @@ export function HomePage({ posts, externalLinks }: HomePageProps) {
   const notes = items.filter(item => item?.type === 'notes');
   const garden = items.filter(item => item?.type === 'garden');
   const bookNotes = items.filter(item => item?.type === 'book');
-
 
   return (
     <React.Fragment>
@@ -49,61 +48,51 @@ export function HomePage({ posts, externalLinks }: HomePageProps) {
               {notes.slice(0, visible).map(item => {
                 return <ListItem item={item} key={item.id} />;
               })}
-              {
-                visible < notes.length - 1
-                ? (
-                  <div className=" flex flex-col pt-2">
-                    <button
-                      className=" content-between bg-transparent
+              {visible < notes.length - 1 ? (
+                <div className=" flex flex-col pt-2">
+                  <button
+                    className=" content-between bg-transparent
                       text-primary-600 font-medium hover:text-primary-800 p-0 border
                       border-transparent rounded self-start"
-                      onClick={showMoreItems} >
-                          Load More →
-                      </button>
-                  </div>
-                )
-                : (
-                  <div className=" flex flex-col pt-2">
-                    <button
-                      className=" content-between bg-transparent 
+                    onClick={showMoreItems}
+                  >
+                    Load More →
+                  </button>
+                </div>
+              ) : (
+                <div className=" flex flex-col pt-2">
+                  <button
+                    className=" content-between bg-transparent 
                       text-primary-600 font-medium hover:text-primary-800 p-0 border
                       border-transparent self-start"
-                      onClick={hideItems} >
-                          Hide
-                      </button>
-                  </div>
-                )
-              }
+                    onClick={hideItems}
+                  >
+                    Hide
+                  </button>
+                </div>
+              )}
             </ul>
           </div>
-          {
-            garden && garden.length 
-            ? (
-              <div className="mt-12">
-                <h2 className="font-semibold text-3xl">Digital garden</h2>
-                <ul className="list-none mt-4">
-                  {garden.map(item => {
-                    return <ListItem item={item} key={item.id} />;
-                  })}
-                </ul>
-              </div>
-            )
-            : null
-          }
-          {
-            bookNotes && bookNotes.length 
-            ? (
-              <div className="mt-12">
-                <h2 className="font-semibold text-3xl">Book notes</h2>
-                <ul className="list-none mt-4">
-                  {bookNotes.map(item => {
-                    return <ListItem item={item} key={item.id} />;
-                  })}
-                </ul>
-              </div>
-            )
-            : null
-          }
+          {garden && garden.length ? (
+            <div className="mt-12">
+              <h2 className="font-semibold text-3xl">Digital garden</h2>
+              <ul className="list-none mt-4">
+                {garden.map(item => {
+                  return <ListItem item={item} key={item.id} />;
+                })}
+              </ul>
+            </div>
+          ) : null}
+          {bookNotes && bookNotes.length ? (
+            <div className="mt-12">
+              <h2 className="font-semibold text-3xl">Book notes</h2>
+              <ul className="list-none mt-4">
+                {bookNotes.map(item => {
+                  return <ListItem item={item} key={item.id} />;
+                })}
+              </ul>
+            </div>
+          ) : null}
         </main>
         <Footer />
       </PageLayout>
