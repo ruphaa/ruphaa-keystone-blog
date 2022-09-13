@@ -47,7 +47,7 @@ function TopNav() {
       <div className="justify-self-end py-2 flex items-center content-center">
         <a
           href="https://github.com/ruphaa"
-          aria-label="Dinesh on GitHub"
+          aria-label="Ruphaa on GitHub"
           rel="noopener noreferrer"
           target="_blank"
           className="text-2xl ml-4 hover:text-primary-800 dark:hover:text-secondary-800"
@@ -56,7 +56,7 @@ function TopNav() {
         </a>
         <a
           href="https://twitter.com/ruphaaganesh"
-          aria-label="Dinesh on Twitter"
+          aria-label="Ruphaa on Twitter"
           rel="noopener noreferrer"
           target="_blank"
           className="text-2xl ml-4 hover:text-primary-800 dark:hover:text-secondary-800"

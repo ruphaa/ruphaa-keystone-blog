@@ -16,7 +16,7 @@ export function BlogPageSeo({
   title,
   slug,
   publishTimeISO,
-  authorName = 'Dinesh Pandiyan',
+  authorName = 'Ruphaa Ganesan',
   metaDescription,
   metaImageUrl,
   metaImageAltText,
