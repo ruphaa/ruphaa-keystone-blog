@@ -2641,10 +2641,10 @@
   resolved "https://registry.yarnpkg.com/@keystone-6/document-renderer/-/document-renderer-1.1.1.tgz#cece98bf38ec38953d7bcb8d0e3799aba2af0568"
   integrity sha512-OziNXEaZwSUWQuA04lbUPzUDyBqc1zxtmw2VAHt51adT6PvTihB58fWhBQ9H17Mytk4Egup4xI3bs7KpG98TOw==
 
-"@keystone-6/fields-document@^4.0.0":
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/@keystone-6/fields-document/-/fields-document-4.1.0.tgz#2c170c305b8b1ad8bc5d0e36c91e85cc44bb570e"
-  integrity sha512-6cSDXDPi36vMTZDK0cEHwOr1sl0WYwqkj67f9Lqb+C2w7cOQQDe3QMZb4cngBT2HEl9WdzaJEC71PtL7QAhapw==
+"@keystone-6/fields-document@^4.1.2":
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/@keystone-6/fields-document/-/fields-document-4.1.2.tgz#33e9bc35fe2e8117aa23057d84623ce45a0c31aa"
+  integrity sha512-gR6OmTut1ZDovnTcG5NNMLD7HzSnr8BLdVGcckuxqcrYLgyaRFIYyniTcLR8em7F6mBOCYI7cD9DUG86LFuNjg==
   dependencies:
     "@babel/runtime" "^7.16.3"
     "@braintree/sanitize-url" "^6.0.0"
@@ -3326,6 +3326,13 @@
   dependencies:
     "@types/ms" "*"
 
+"@types/dompurify@^2.3.4":
+  version "2.3.4"
+  resolved "https://registry.yarnpkg.com/@types/dompurify/-/dompurify-2.3.4.tgz#94e997e30338ea24d4c8d08beca91ce4dd17a1b4"
+  integrity sha512-EXzDatIb5EspL2eb/xPGmaC8pePcTHrkDCONjeisusLFrVfl38Pjea/R0YJGu3k9ZQadSvMqW0WXPI2hEo2Ajg==
+  dependencies:
+    "@types/trusted-types" "*"
+
 "@types/es-aggregate-error@^1.0.2":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@types/es-aggregate-error/-/es-aggregate-error-1.0.2.tgz#a970b4a5bbee95d87aebaa2aa317c846c18429df"
@@ -3575,6 +3582,11 @@
   integrity sha512-X3HPWTwXRerBZS7Mo1k6vMVR1Z6zmJcDVn5O/31whe0tnjE4te6ZJSJGq1RiqHPjzPdMTfjCFogDJmwng9xHaQ==
   dependencies:
     "@types/superagent" "*"
+
+"@types/trusted-types@*":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@types/trusted-types/-/trusted-types-2.0.2.tgz#fc25ad9943bcac11cceb8168db4f275e0e72e756"
+  integrity sha512-F5DIZ36YVLE+PN+Zwws4kJogq47hNgX3Nx6WyDJ3kcplxyke3XIzB8uK5n/Lpm1HBsbGzd6nmGehL8cPekP+Tg==
 
 "@types/uid-safe@^2.1.2":
   version "2.1.2"
@@ -4559,6 +4571,11 @@ ci-info@^3.2.0:
   resolved "https://registry.yarnpkg.com/ci-info/-/ci-info-3.3.2.tgz#6d2967ffa407466481c6c90b6e16b3098f080128"
   integrity sha512-xmDt/QIAdeZ9+nfdPsaBCpMvHNLFiLdjj59qjqn+6iPe6YmHGQ35sBnQ8uslRBXFmXkiZQOJRjvQeoGppoTjjg==
 
+classnames@^2.3.2:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.3.2.tgz#351d813bf0137fcc6a76a16b88208d2560a0d924"
+  integrity sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==
+
 clean-stack@^2.0.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/clean-stack/-/clean-stack-2.2.0.tgz#ee8472dbb129e727b31e8a10a427dee9dfe4008b"
@@ -5098,6 +5115,11 @@ dom-helpers@^5.0.1:
   dependencies:
     "@babel/runtime" "^7.8.7"
     csstype "^3.0.2"
+
+dompurify@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/dompurify/-/dompurify-2.4.0.tgz#c9c88390f024c2823332615c9e20a453cf3825dd"
+  integrity sha512-Be9tbQMZds4a3C6xTmz68NlMfeONA//4dOavl/1rNw50E+/QO0KVpbcU0PcaW0nsQxurXls9ZocqFxk8R2mWEA==
 
 dot-case@^3.0.4:
   version "3.0.4"

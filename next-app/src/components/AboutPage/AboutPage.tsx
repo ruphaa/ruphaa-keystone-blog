@@ -28,6 +28,7 @@ const talks = [
   },
 ];
 
+
 const ListItem = ({
   id,
   title,
@@ -72,10 +73,11 @@ export function AboutPage() {
           <Header forPage="about" />
           <div className="mt-12">
             <h2 className="font-semibold text-3xl">About me</h2>
-            <p className="mt-4 dark:text-slate-400">
-              Hey, I'm Ruphaa! I'm a Software Engineer working in Sydney. Welcome to my digital
-              garden, this is the space where I write blogs, build projects and many more creative
-              and interesting stuff.
+            <p className="mt-4">
+              Hey, I'm Ruphaa! I'm a Software Engineer working in Sydney. <br/><br/>
+              Welcome to my digital garden, this is the space where I write blogs ✍🏽, build projects 🏗 and publish many more creative
+              and interesting stuff 🤩 <br/><br/>
+              ✨ Bonus: Definitely expect funny memes and dev rants 🤓
             </p>
           </div>
           <div className="mt-12">
@@ -86,6 +88,14 @@ export function AboutPage() {
               ))}
             </ul>
           </div>
+          {/* <div className="mt-12">
+            <h2 className="font-semibold text-3xl">Software I can't live without 👩🏻‍💻</h2>
+            <ul className="list-none mt-4">
+              {talks.map((talk, index) => (
+                <ListItem id={index} title={talk.title} link={talk.link} date={talk.date} />
+              ))}
+            </ul>
+          </div> */}
         </main>
       </PageLayout>
     </React.Fragment>

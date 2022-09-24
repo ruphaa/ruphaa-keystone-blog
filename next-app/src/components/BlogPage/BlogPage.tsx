@@ -41,13 +41,6 @@ export function BlogPage({ post }: BlogPageProps) {
       <PageLayout className="max-w-[50rem] grid grid-rows-[1fr_auto]">
         <main className="p-4">
           <Header forPage="blog" />
-          <div className="pb-4">
-            <Link href="/">
-              <a className="no-underline hover:text-link before:content-['←'] before:pr-1 hover:before:-translate-x-1 before:inline-block before:transition-all before:duration-150 before:ease-in-out">
-                back home
-              </a>
-            </Link>
-          </div>
           <article className="prose lg:prose-lg prose:slate dark:prose-invert max-w-none pb-8 mt-12">
             <h1 className="!mb-0 pb-4">{post.title}</h1>
             <div className="text-sm text-slate-500 dark:text-slate-400">{formattedDate}</div>

@@ -5,6 +5,8 @@ import { Hero } from './Hero';
 import { Callout } from './Callout';
 import { Quote } from './Quote';
 import { Tweet } from './Tweet';
+import { Image } from './Image';
+import { EmbedCode } from './EmbedCode';
 import { YouTubeVideo } from './YouTubeVideo';
 
 const defaultElementRenderers: DocumentRendererProps['renderers'] = {
@@ -59,6 +61,12 @@ const customComponentRenderers: CustomRendererProps['componentBlocks'] = {
   },
   youtubeVideo: props => {
     return <YouTubeVideo {...props} />;
+  },
+  image: props => {
+    return <Image {...props} />;
+  },
+  embedCode: props => {
+    return <EmbedCode {...props} />;
   },
   code: function Code({ content, language }: any) {
     return (

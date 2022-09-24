@@ -5,60 +5,46 @@ import { Header } from '../Header/Header';
 const projects = [
   {
     name: 'Twitter Bot',
-    description: '',
+    description: 'Netlify function to tweet a dev article everyday',
     source: 'https://github.com/ruphaa/twitter-bot',
     demo: 'https://twitter.com/dailydevcodes',
     article: '',
   },
   {
     name: 'Product hunt clone',
-    description: '',
+    description: 'Product Hunt Clone built using Vue',
     source: 'https://github.com/ruphaa/vue-producthunt',
     demo: 'https://vue-producthunt-clone.netlify.app',
     article: '',
   },
   {
     name: 'Pictionary',
-    description: '',
+    description: 'Pictionary game built with Vue',
     source: 'https://github.com/ruphaa/vue-pictionary',
     demo: 'https://vue-pictionary.netlify.app/',
     article: '',
   },
   {
     name: 'Pomodoro Timer App',
-    description: '',
+    description: 'Vue based Pomodoro app for productivity',
     source: 'https://github.com/ruphaa/pomodoro-app',
     demo: 'https://pomodora-time-tracker.netlify.app/',
     article: '',
   },
   {
     name: 'Pastry shop website',
-    description: '',
+    description: 'Pastry Shop Web Application built using Ember',
     source: 'https://github.com/ruphaa/ember-pastry-shop',
     demo: 'https://ember-pastry-shop.netlify.app/home',
     article: '',
   },
   {
-    name: 'React powered TODO app',
-    description: '',
+    name: 'TODO app',
+    description: 'Simple todo app built using React⚡️',
     source: 'https://github.com/ruphaa/react-todo-app',
     demo: 'https://dry-mountain-79163.herokuapp.com/',
     article: '',
-  },
-  {
-    name: 'Responsive form',
-    description: '',
-    source: 'https://github.com/ruphaa/responsive-form',
-    demo: 'https://dribble-responsive-form.netlify.app/',
-    article: '',
-  },
-  {
-    name: 'Search application',
-    description: '',
-    source: 'https://github.com/ruphaa/search-app',
-    demo: '',
-    article: '',
-  },
+  }
 ];
 
 export function ProjectPage() {
@@ -82,14 +68,14 @@ export function ProjectPage() {
                       >
                         {project.name}
                       </a>
-                      {project.description && <p className="text-sm">{project.description}</p>}
+                      {project.description && <p className="text-xs m-1 text-grey-700">{project.description}</p>}
                     </div>
                     <div className="links mx-1 flex gap-x-2">
                       {project.source && (
                         <a
                           href={project.source}
                           target="_blank"
-                          className="text-xs font-medium bg-primary-200 rounded block py-0.5 px-2 dark:text-slate-800"
+                          className="text-xs font-medium bg-primary-200 rounded block py-0.5 px-2 hover:bg-primary-100 dark:text-slate-800"
                         >
                           🔗 Source
                         </a>
@@ -98,7 +84,7 @@ export function ProjectPage() {
                         <a
                           href={project.article}
                           target="_blank"
-                          className="text-xs font-medium bg-primary-200 rounded block py-0.5 px-2 dark:text-slate-800"
+                          className="text-xs font-medium bg-primary-200 rounded block py-0.5 px-2 hover:bg-primary-100 dark:text-slate-800"
                         >
                           🔗 Article
                         </a>
@@ -107,7 +93,7 @@ export function ProjectPage() {
                         <a
                           href={project.demo}
                           target="_blank"
-                          className="text-xs font-medium bg-primary-200 rounded block py-0.5 px-2 dark:text-slate-800"
+                          className="text-xs font-medium bg-primary-200 rounded block py-0.5 px-2 hover:bg-primary-100 dark:text-slate-800"
                         >
                           🔗 Demo
                         </a>

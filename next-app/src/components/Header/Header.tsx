@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faTwitter, faCodepen } from '@fortawesome/free-brands-svg-icons';
 import { ThemeToggle } from './ThemeToggle';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -71,6 +71,15 @@ function TopNav() {
           className="text-2xl ml-4 hover:text-primary-800 dark:hover:text-secondary-800"
         >
           <FontAwesomeIcon icon={faTwitter} />
+        </a>
+        <a
+          href="https://codepen.io/ruphaa"
+          aria-label="Ruphaa on Codepen"
+          rel="noopener noreferrer"
+          target="_blank"
+          className="text-2xl ml-4 hover:text-primary-800 dark:hover:text-secondary-800"
+        >
+          <FontAwesomeIcon icon={faCodepen} />
         </a>
         <ThemeToggle />
       </div>
