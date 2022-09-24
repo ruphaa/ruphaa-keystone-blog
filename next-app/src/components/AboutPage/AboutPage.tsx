@@ -28,7 +28,6 @@ const talks = [
   },
 ];
 
-
 const ListItem = ({
   id,
   title,
@@ -74,10 +73,11 @@ export function AboutPage() {
           <div className="mt-12">
             <h2 className="font-semibold text-3xl">About me</h2>
             <p className="mt-4">
-              Hey, I'm Ruphaa! I'm a Software Engineer working in Sydney. <br/><br/>
-              Welcome to my digital garden, this is the space where I write blogs ✍🏽, build projects 🏗 and publish many more creative
-              and interesting stuff 🤩 <br/><br/>
-              ✨ Bonus: Definitely expect funny memes and dev rants 🤓
+              Hey, I'm Ruphaa! I'm a Software Engineer working in Sydney. <br />
+              <br />
+              Welcome to my digital garden, this is the space where I write blogs ✍🏽, build projects
+              🏗 and publish many more creative and interesting stuff 🤩 <br />
+              <br />✨ Bonus: Definitely expect funny memes and dev rants 🤓
             </p>
           </div>
           <div className="mt-12">

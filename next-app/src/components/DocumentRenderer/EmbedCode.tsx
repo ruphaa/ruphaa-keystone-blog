@@ -5,8 +5,8 @@ type EmbedCodeProps = {
 };
 
 export function EmbedCode({ codeSrc }: EmbedCodeProps) {
-  return <div dangerouslySetInnerHTML={{ __html: codeSrc }} />
-};
+  return <div dangerouslySetInnerHTML={{ __html: codeSrc }} />;
+}
 
 /**
  * Embed ideas:

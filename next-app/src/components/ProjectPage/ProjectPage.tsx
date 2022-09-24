@@ -44,7 +44,7 @@ const projects = [
     source: 'https://github.com/ruphaa/react-todo-app',
     demo: 'https://dry-mountain-79163.herokuapp.com/',
     article: '',
-  }
+  },
 ];
 
 export function ProjectPage() {
@@ -68,7 +68,9 @@ export function ProjectPage() {
                       >
                         {project.name}
                       </a>
-                      {project.description && <p className="text-xs m-1 text-grey-700">{project.description}</p>}
+                      {project.description && (
+                        <p className="text-xs m-1 text-grey-700">{project.description}</p>
+                      )}
                     </div>
                     <div className="links mx-1 flex gap-x-2">
                       {project.source && (
